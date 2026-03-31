@@ -9,3 +9,6 @@
 
 # 1.0.3
 - Fix bugs
+
+# 1.0.4
+- More accurate calculations
