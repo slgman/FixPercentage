@@ -12,3 +12,6 @@
 
 # 1.0.4
 - More accurate calculations
+
+# 1.0.5
+- Correct resize the fill node's content width, not scale it for progress bar
