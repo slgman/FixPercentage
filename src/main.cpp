@@ -22,9 +22,10 @@ class $modify(PlayLayer) {
         if (!m_progressBar || !m_progressFill) return;
 
         float pct = getCurrentPercent() / 100.f;
+        float newWidth = m_progressWidth * pct;
+        auto currentSize = m_progressFill->getContentSize();
 
-        auto size = m_progressFill->getContentSize();
-        m_progressFill->setContentSize({ m_progressWidth * pct, size.height });
+        m_progressFill->setTextureRect({0, 0, newWidth, currentSize.height});
 
         if (!m_percentageLabel) return;
         m_percentageLabel->setString(formatPercent(getCurrentPercent()).c_str());
